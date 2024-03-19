@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="success.css" />
+    <title>Success</title>
+  </head>
+  <body>
+    <div class="container">
+      <img src="./assets/images/icon-success.svg" alt="" />
+      <h1>Thanks for subscribing!</h1>
+      <p>
+        A confirmation email has been sent to <span id="email"></span>. Please
+        open it and click the button inside to confirm your subscription.
+      </p>
+      <a href="index.html">Dismiss message</a>
+    </div>
+
+    <script>
+      // Retrieve data from localStorage
+      const storedData = localStorage.getItem("formData");
+
+      if (storedData) {
+        // Parse JSON string to JS object
+        const data = JSON.parse(storedData);
+
+        // Display data on the success page
+        const formDataDiv = document.getElementById("email");
+        formDataDiv.textContent = data.email;
+      }
+    </script>
+  </body>
+</html>
