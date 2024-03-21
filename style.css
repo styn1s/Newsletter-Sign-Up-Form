@@ -118,13 +118,68 @@ img{
     height: 100%;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 820px){
+    .container{
+        width: 620px;
+        height: 460px;
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .left-column{
+        width: auto;
+        padding: 0;
+        margin-top: 50px;
+
+        h1{
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        p, ol{
+            font-size: 13px;
+            width: 95%;
+        }
+    }
+
+    .right-column{
+        width: 70%;
+        height: 92%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-container{
+        margin-top: 20px;
+    }
+
+    #email-input{
+        font-size: 11px;
+        padding: 10px 0 10px 15px;
+        margin-bottom: 10px;
+    }
+    #send-btn{
+        font-size: 11px;
+        padding: 10px 0;
+    }
+    #email-title{
+        font-size: 11px;
+    }
+}
+
+
+
+@media screen and (max-width: 625px){
     html, body{
-        height: auto;
+        height: 100%;
+        width: 100%;
     }
     .container{
         width: 100%;
-        height: 125%;
+        height: auto;
         margin: auto;
         border-radius: 0;
         display: flex;
@@ -134,26 +189,31 @@ img{
 
     .left-column{
         padding: 0;
-        margin-left: 20px;
+        margin-left: 30px;
         height: 100%;
         width: 88%;
         order: 2;
 
+        h1{
+            font-size: 45px;
+        }
+
         ol, p{
-            width: 100%;
+            width: 95%;
+            font-size: 15px;
         }
     }
     
     .right-column{
         width: 100%;
-        height: 100%;
+        height: auto;
         margin: 0;
         order: 1;
         border-radius: 0;
     }
 
     .form-container{
-        width: 101%;
+        width: 95%;
     }
 
     #email-form{
@@ -168,6 +228,17 @@ img{
 
     #email-title{
         width: 100%;
+        font-size: 13px;
+    }
+
+    #email-input{
+        padding: 15px 0 15px 20px;
+        font-size: 13px;
+    }
+
+    #send-btn{
+        padding: 15px 0;
+        font-size: 14px;
     }
 
     ol li{
@@ -178,6 +249,6 @@ img{
 
     img{
         width: 100%;
-        height: 100%;
+        height: auto;
     }
 }
