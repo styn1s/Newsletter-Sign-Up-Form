@@ -59,6 +59,8 @@ a:hover{
         height: 100%;
         border-radius: 0;
         padding: 0px 30px;
+        display: flex;
+        align-items: center;
 
         h1{
             margin-top: 0;
@@ -66,7 +68,7 @@ a:hover{
     }
     .wrapper{
         position: relative;
-        top: 100px;
+        top: -100px;
     }
 
     a{
