@@ -6,7 +6,7 @@ This project is a minimalistic form for subscribing to a newsletter.
 
 ## How To Run The Project
 
-Before starting the project, make sure that you've installed the required fonts from the **fonts** folder. 
+Before starting the project, make sure that you've installed the required fonts from the **assets/fonts** folder. 
 
 Then just download the files in this perository, and open index.html.
 
