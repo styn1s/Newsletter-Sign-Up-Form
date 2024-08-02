@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Newsletter</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <title>Newsletter Form</title>
   </head>
   <body>
-    <div class="container">
-      <div class="left-column">
+
+    <main>
+      <section class="newsletter-info">
         <h1>Stay updated!</h1>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
         <ol>
@@ -17,17 +19,16 @@
           <li>And much more!</li>
         </ol>
 
-        <div class="form-container">
-          <p id="email-title">Email address<span id="error-text"></span></p>
-
-          <form id="email-form" action="success.html">
+        <section class="form-wrapper">
+          <p>Email address<span id="error-text"></span></p>
+          <form action="success.html">
             <input
               type="email"
               name="email"
               placeholder="email@company.com"
               id="email-input"
-              required
               minlength="8"
+              required
             />
             <input
               type="submit"
@@ -35,74 +36,19 @@
               id="send-btn"
             />
           </form>
-        </div>
-      </div>
+        </section>
+      </section>
 
-      <div class="right-column">
+      <section class="pic-wrapper">
         <img
           src="./assets/images/illustration-sign-up-desktop.svg"
-          alt="DesktopImg"
+          alt="Desktop image"
+          loading="lazy"
         />
-      </div>
-    </div>
+      </section>
+    </main>
 
-    <script>
-      const form = document.querySelector("form");
-      const email = document.getElementById("email-input");
-      const emailError = document.getElementById("error-text");
+    <script src="index.js"></script>
 
-      email.addEventListener("input", (event) => {
-        if (email.validity.typeMismatch) {
-          showError();
-        } else {
-          hideError();
-        }
-      });
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Get form data
-        const formData = new FormData(this);
-
-        // Convert form data to JS object
-        const data = {};
-        formData.forEach((value, key) => {
-          data[key] = value;
-        });
-
-        // Convert object to JSON string
-        const jsonData = JSON.stringify(data);
-
-        // Store data in localStorage
-        localStorage.setItem("formData", jsonData);
-
-        // Submit the form
-        this.submit();
-      });
-
-      window.addEventListener("resize", function () {
-        if (window.innerWidth <= 625) {
-          document.querySelector("img").src =
-            "./assets/images/illustration-sign-up-mobile.svg";
-        } else {
-          document.querySelector("img").src = "./assets/images/illustration-sign-up-desktop.svg";
-        }
-      });
-
-      function showError() {
-        emailError.textContent = "Valid email required";
-        email.style.borderColor = "rgba(255,85,114,255)";
-        email.style.color = "rgba(255,85,114,255)";
-        email.style.backgroundColor = "rgba(255,85,114,0.1)";
-      }
-
-      function hideError() {
-        emailError.textContent = "";
-        email.style.borderColor = "lightgray";
-        email.style.color = "black";
-        email.style.backgroundColor = "white";
-      }
-    </script>
   </body>
 </html>
