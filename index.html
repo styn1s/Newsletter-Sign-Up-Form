@@ -3,12 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Join 60,000+ product managers receiving monthly updates on product discovery, building what matters, measuring success, and more!"
+    />
+    <meta
+      name="keywords"
+      content="newsletter, product management, updates, product discovery, success measurement"
+    />
+    <meta name="author" content="Styn1s" />
+    <link rel="preload" href="index.css" as="style" />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
     <title>Newsletter Form</title>
   </head>
   <body>
-
     <main>
       <section class="newsletter-info">
         <h1>Stay updated!</h1>
@@ -18,10 +30,9 @@
           <li>Measuring to ensure updates are a success</li>
           <li>And much more!</li>
         </ol>
-
-        <section class="form-wrapper">
-          <p>Email address<span id="error-text"></span></p>
-          <form action="success.html">
+        <section class="form-wrapper" aria-labelledby="form-title">
+          <p id="form-title">Email address<span id="error-text" aria-live="polite"></span></p>
+          <form action="success.html" aria-describedby="form-title">
             <input
               type="email"
               name="email"
@@ -29,26 +40,26 @@
               id="email-input"
               minlength="8"
               required
+              aria-required="true"
+              aria-label="Email address"
             />
             <input
               type="submit"
               value="Subscribe to monthly newsletter"
               id="send-btn"
+              aria-label="Subscribe to monthly newsletter"
             />
           </form>
         </section>
       </section>
-
       <section class="pic-wrapper">
         <img
           src="./assets/images/illustration-sign-up-desktop.svg"
-          alt="Desktop image"
+          alt="Illustration of signing up for the newsletter"
           loading="lazy"
         />
       </section>
     </main>
-
     <script src="index.js"></script>
-
   </body>
 </html>

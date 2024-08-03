@@ -14,7 +14,7 @@ form.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent default form submission
 
   // Get form data
-  const formData = new FormData(this);
+  const formData = new FormData(this); 
 
   // Convert form data to JS object
   const data = {};
