@@ -49,6 +49,7 @@ function onSubmitForm(event) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
+  updateImg();
   window.addEventListener("resize", updateImg);
   form.addEventListener("submit", onSubmitForm);
   emailInput.addEventListener("input", (event) => {

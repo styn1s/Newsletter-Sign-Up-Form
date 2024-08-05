@@ -3,35 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Thank you for subscribing! Please check your email to confirm your subscription."
+    />
+    <meta name="keywords" content="subscription, email confirmation, success" />
+    <meta name="author" content="Styn1s" />
+    <link rel="preload" href="success.css" as="style" />
     <link rel="stylesheet" href="success.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
     <title>Success</title>
   </head>
   <body>
-    <div class="container">
-      <div class="wrapper">
-        <img src="./assets/images/icon-success.svg" alt="" />
-        <h1>Thanks for subscribing!</h1>
+    <main>
+      <section aria-labelledby="success-message">
+        <img
+          src="./assets/images/icon-success.svg"
+          alt="Success icon"
+          loading="lazy"
+        />
+        <h1 id="success-message">Thanks for subscribing!</h1>
         <p>
-          A confirmation email has been sent to <span id="email"></span>. Please
-          open it and click the button inside to confirm your subscription.
+          A confirmation email has been sent to
+          <span id="email" class="email-address"></span>. Please open it and click the
+          button inside to confirm your subscription.
         </p>
-      </div>
-
-      <a href="index.html">Dismiss message</a>
-    </div>
-
-    <script>
-      // Retrieve data from localStorage
-      const storedData = localStorage.getItem("formData");
-
-      if (storedData) {
-        // Parse JSON string to JS object
-        const data = JSON.parse(storedData);
-
-        // Display data on the success page
-        const formDataDiv = document.getElementById("email");
-        formDataDiv.textContent = data.email;
-      }
-    </script>
+      </section>
+      <a href="index.html" aria-label="Dismiss message">Dismiss message</a>
+    </main>
+    <script src="success.js"></script>
   </body>
 </html>
