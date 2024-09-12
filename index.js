@@ -19,9 +19,9 @@ function hideError() {
 function updateImg() {
   const imgElement = document.querySelector("img");
   if (window.innerWidth <= 625) {
-    imgElement.src = "./assets/images/illustration-sign-up-mobile.svg";
+    imgElement.src = "./images/illustration-sign-up-mobile.svg";
   } else {
-    imgElement.src = "./assets/images/illustration-sign-up-desktop.svg";
+    imgElement.src = "./images/illustration-sign-up-desktop.svg";
   }
 }
 
