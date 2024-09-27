@@ -5,9 +5,10 @@
   --light-color: hsl(0, 0%, 100%);
   --gradient-color: linear-gradient(
     to right,
-    rgba(255, 85, 114, 255),
-    rgba(255, 103, 66, 255)
+    hsla(350, 100%, 67%, 1),
+    hsla(12, 100%, 63%, 1)
   );
+  --shadow-color: hsla(0, 100%, 53%, 0.4);
 }
 
 html,
@@ -22,33 +23,33 @@ body {
   background-color: var(--background-color);
 }
 
-main {
+.main {
   width: 20rem;
   padding: 2.5rem 3.125rem 2.5rem 3.125rem;
   background-color: var(--light-color);
   border-radius: 2rem;
 }
 
-img {
+.success__image {
   height: 3.125rem;
 }
 
-main h1 {
+.success__title {
   margin: 1.25rem 0;
   font-size: 2.8125rem;
 }
 
-main p {
+.success__description {
   font-size: .875rem;
   line-height: 1.3rem;
 }
 
-.email-address,
-a {
+.success__email,
+.success__button {
   font-weight: bold;
 }
 
-a {
+.success__button {
   display: flex;
   justify-content: center;
   margin: 2.5rem 0 .9375rem 0;
@@ -61,14 +62,14 @@ a {
   transition: box-shadow 0.3s;
 }
 
-a:hover {
+.success__button:hover {
   border: none;
   background-image: var(--gradient-color);
-  box-shadow: rgba(255, 16, 16, 0.4) 0rem .625rem 1.25rem 0rem;
+  box-shadow: 0 .625rem 1.25rem 0 var(--shadow-color);
 }
 
 @media screen and (max-width: 430px) {
-  main {
+  .main {
     position: static;
     display: flex;
     align-items: center;
@@ -78,24 +79,23 @@ a:hover {
     border-radius: 0;
   }
 
-  section {
-    position: relative;
-    top: -6.25rem;
+  .success {
+    margin-bottom: 100px;
   }
 
-  img {
+  .success__image {
     margin-bottom: 1.25rem;
   }
 
-  main h1 {
+  .success__title {
     margin-top: 0;
   }
 
-  main p {
+  .success__description {
     margin-top: 0;
   }
 
-  a {
+  .success__button {
     position: absolute;
     bottom: 3.125rem;
     width: 84%;

@@ -19,21 +19,22 @@
     <title>Success</title>
   </head>
   <body>
-    <main>
-      <section aria-labelledby="success-message">
+    <main class="main">
+      <section class="success" aria-labelledby="success-message">
         <img
           src="./images/icon-success.svg"
+          class="success__image"
           alt="Success icon"
           loading="lazy"
         />
-        <h1 id="success-message">Thanks for subscribing!</h1>
-        <p>
+        <h1 class="success__title" id="success-message">Thanks for subscribing!</h1>
+        <p class="success__description">
           A confirmation email has been sent to
-          <span id="email" class="email-address"></span>. Please open it and click the
+          <span class="success__email" id="email"></span>. Please open it and click the
           button inside to confirm your subscription.
         </p>
+        <a href="index.html" class="success__button" aria-label="Dismiss message">Dismiss message</a>
       </section>
-      <a href="index.html" aria-label="Dismiss message">Dismiss message</a>
     </main>
     <script src="success.js"></script>
   </body>

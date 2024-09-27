@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="description"
       content="Join 60,000+ product managers receiving monthly updates on product discovery, building what matters, measuring success, and more!"
@@ -22,22 +22,36 @@
     <title>Newsletter Form</title>
   </head>
   <body>
-    <main>
-      <section class="newsletter-info">
-        <h1>Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
-        <ol>
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
+    <main class="main">
+      <section class="newsletter">
+        <h1 class="newsletter__title">Stay updated!</h1>
+        <p class="newsletter__description">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ol class="newsletter__list">
+          <li class="newsletter__item">
+            Product discovery and building what matters
+          </li>
+          <li class="newsletter__item">
+            Measuring to ensure updates are a success
+          </li>
+          <li class="newsletter__item">And much more!</li>
         </ol>
-        <section class="form-wrapper" aria-labelledby="form-title">
-          <p id="form-title">Email address<span id="error-text" aria-live="polite"></span></p>
-          <form action="success.html" aria-describedby="form-title">
+
+        <section class="form" aria-labelledby="form-title">
+          <p class="form__title" id="form-title">
+            Email address<span
+              class="form__error-text"
+              id="error-text"
+              aria-live="polite"
+            ></span>
+          </p>
+          <form class="form__body" action="success.html" aria-describedby="form-title">
             <input
               type="email"
               name="email"
               placeholder="email@company.com"
+              class="form__input"
               id="email-input"
               minlength="8"
               required
@@ -47,15 +61,18 @@
             <input
               type="submit"
               value="Subscribe to monthly newsletter"
+              class="form__submit"
               id="send-btn"
               aria-label="Subscribe to monthly newsletter"
             />
           </form>
         </section>
+
       </section>
-      <section class="pic-wrapper">
+      <section class="pic">
         <img
           src="./images/illustration-sign-up-desktop.svg"
+          class="pic__image"
           alt="Illustration of signing up for the newsletter"
           loading="lazy"
         />
